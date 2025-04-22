@@ -40,20 +40,33 @@
     padding: 0;
 }
 
+body{
+   font-size: 13px;
+}
+
 
 
 .header-nav{
     height: 43px;
     margin: 29px 0;
-    align-items: center;
+
     display: flex;
+    align-items: center;
+    
+}
+
+.header{
+    height: 100%
 }
 
 
 .nav-list{
+   
+    
     text-decoration: none;
     list-style: none;
     display: flex;
+    align-items: center;
 }
 
 
@@ -62,6 +75,7 @@
     align-items: center;
     gap: 10px;
     cursor: pointer;
+    margin-right: 40px;
   }
   
   .burger-icon {
@@ -109,6 +123,59 @@
     transform: translateY(2px) ;
   }
   
+
+  .selector{
+    background: var(--main);
+    cursor: pointer;
+    border-radius: 100px;
+    width: 203px;
+    height: 43px;
+    align-items: center;
+    display: flex;
+    position: relative;
+    margin-right: 270px;
+  }
+
+  .selector-text{
+    color: white;
+    text-transform: uppercase;
+    font-size: 13px;
+    padding: 15px  10px 15px 20px;
+    font-family: 'Proxima Nova';
+    font-weight: 600;
+  }
+
+  .selector-text::after{
+    content: url(/image/select.svg);
+    position: absolute;
+    width: 12px;
+    height: 13px;
+    right: 30px;
+
+  }
+
+  .logo{
+    margin-right: 323px;
+  }
+
+  a{
+    text-decoration: none;
+  }
+
+  .link{
+    margin-left: auto;
+    font-family: 'Proxima Nova';
+    color: var(--main);
+    font-size: 13px;
+  } 
+
+  .phone{
+      font-family: 'Proxima Nova';
+    font-weight: 600;
+    font-size: 14px;
+    color: black;
+  }
+
 
 
 
@@ -217,7 +284,7 @@
     width: 100%;
     margin: 0 auto;
     padding: 0 20px; /* Мобильные (0–767px) */
-    /* Для дебага */
+    
   }
   
   /* Планшеты (верт., 768–1023px) */
@@ -239,7 +306,7 @@
   /* Основной десктоп (1281–1769px) — НАЧИНАЕМ ОТСЮДА */
   @media (min-width: 1281px) {
     .container {
-      max-width: 1360px; /* 1440 - (40+40) */
+      max-width: 1440px; /* 1440 - (40+40) */
       padding: 0 40px;
     }
   }
