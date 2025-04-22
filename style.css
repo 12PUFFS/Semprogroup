@@ -56,7 +56,146 @@ body{
 }
 
 .header{
-    height: 100%
+
+}
+
+/* Модальное окно */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 1000;
+}
+
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal {
+    background: white;
+    padding: 40px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 450px;
+    position: relative;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+}
+
+.modal-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #999;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.modal-close:hover {
+    color: #333;
+    transform: rotate(90deg);
+}
+
+.modal-title {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #333;
+}
+
+/* Форма */
+.form-group {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 12px 0;
+    border: none;
+    border-bottom: 1px solid #ddd;
+    font-size: 16px;
+    outline: none;
+    background: transparent;
+    transition: border-color 0.3s ease;
+}
+
+.form-control:focus {
+    border-bottom-color: #333;
+}
+
+.form-label {
+    position: absolute;
+    left: 0;
+    top: 12px;
+    color: #999;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    pointer-events: none;
+}
+
+.form-control:focus + .form-label,
+.form-control:not(:placeholder-shown) + .form-label {
+    top: -12px;
+    font-size: 12px;
+    color: #666;
+}
+
+.form-note {
+    font-size: 12px;
+    color: #999;
+    margin: 25px 0;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 15px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-transform: uppercase;
+}
+
+.submit-btn:hover {
+    background-color: #555;
+}
+
+/* Адаптивность */
+@media (max-width: 767px) {
+    .modal {
+        padding: 30px 20px;
+        margin: 0 15px;
+    }
+    
+    .modal-title {
+        font-size: 20px;
+        margin-bottom: 25px;
+    }
+    
+    .form-control {
+        padding: 10px 0;
+    }
 }
 
 
