@@ -32,7 +32,9 @@
                     </li>
                     <li class="nav-item">
                         
-                            <img class="logo" src="/image/logo 1.svg" alt="">
+                            <a href="#">
+                                <img class="logo" src="./image/logo 1.svg" alt="">
+                            </a>
                     </li>
                     <li class="nav-item">
                         <a href="tel:+74955272121" class="phone">+7 495 527 21 21</a>
@@ -54,8 +56,8 @@
     </div>
 
     <div class="modal-overlay" id="modalOverlay">
+        <button class="modal-close" id="closeModalBtn">&times;</button>
         <div class="modal">
-            <button class="modal-close" id="closeModalBtn">&times;</button>
             <h2 class="modal-title">ЗАКАЗАТЬ ЗВОНОК</h2>
             
             <form class="callback-form" id="callbackForm">
@@ -65,7 +67,13 @@
                 </div>
                 
                 <div class="form-group">
-                    <input type="tel" id="phone" class="form-control" placeholder=" " required>
+                    <input type="tel" 
+                           id="phone" 
+                           class="form-control" 
+                           placeholder="+7 (___) ___-__-__"
+                           pattern="\+7\s\(\d{3}\)\s\d{3}-\d{2}-\d{2}"
+                           title="Формат: +7 (999) 999-99-99"
+                           required>
                     <label for="phone" class="form-label">ТЕЛЕФОН</label>
                 </div>
                 
@@ -74,16 +82,18 @@
                     <label for="email" class="form-label">E-MAIL</label>
                 </div>
                 
-                <p class="form-note">
-                    Нажмите на сетевую «Открытие», вы ознакомитесь<br>
-                    к соглашению, с подписью обработки перспективных данных
-                </p>
-                
-                <button type="submit" class="submit-btn">ОТПРАВИТЬ</button>
+                <div class="align-btn">
+                    <p class="form-note">
+                        Нажмите на сетевую «Открытие», вы ознакомитесь<br>
+                        к соглашению, с подписью обработки перспективных данных
+                    </p>
+                    
+                    <button type="submit" class="submit-btn">ОТПРАВИТЬ</button>
+                </div>
             </form>
         </div>
     </div>
 
-    <script src="index.js"></script>
+    <script src="./index.js"></script>
 </body>
 </html>

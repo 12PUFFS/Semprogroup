@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Proxima Nova';
-    src: url('fonts/ProximaNova-Semibold.woff2') format('woff2'), url('./ProximaNova-Semibold.woff') format('woff');
+    src: url('./fonts/ProximaNova-Semibold.woff2') format('woff2'), url('./ProximaNova-Semibold.woff') format('woff');
     font-weight: 600;
     font-style: normal;
     font-display: swap;
@@ -8,7 +8,7 @@
 
 @font-face {
     font-family: 'Proxima Nova';
-    src: url('fonts/ProximaNova-Bold.woff2') format('woff2'), url('./ProximaNova-Bold.woff') format('woff');
+    src: url('./fonts/ProximaNova-Bold.woff2') format('woff2'), url('./ProximaNova-Bold.woff') format('woff');
     font-weight: bold;
     font-style: normal;
     font-display: swap;
@@ -16,7 +16,7 @@
 
 @font-face {
     font-family: 'Proxima Nova';
-    src: url('fonts/ProximaNova-Regular.woff2') format('woff2'), url('./ProximaNova-Regular.woff') format('woff');
+    src: url('./fonts/ProximaNova-Regular.woff2') format('woff2'), url('./ProximaNova-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -24,7 +24,7 @@
 
 @font-face {
     font-family: 'Proxima Nova';
-    src: url('fonts/ProximaNova-Light.woff2') format('woff2'), url('./ProximaNova-Light.woff') format('woff');
+    src: url('./fonts/ProximaNova-Light.woff2') format('woff2'), url('./ProximaNova-Light.woff') format('woff');
     font-weight: 300;
     font-style: normal;
     font-display: swap;
@@ -66,7 +66,7 @@ body{
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.7);
+    background: white;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -86,22 +86,77 @@ body{
     padding: 40px;
     border-radius: 8px;
     width: 100%;
-    max-width: 450px;
+    max-width: 454px;
     position: relative;
-    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+    font-family: 'Proxima Nova';
+
+
+}
+
+
+
+/* Стили для поля телефона */
+#phone {
+  font-family: 'Proxima Nova', Arial, sans-serif;
+  letter-spacing: 0.5px;
+}
+
+/* Плейсхолдер в неактивном состоянии */
+#phone:not(:focus):placeholder-shown {
+  color: transparent;
+}
+
+/* Плейсхолдер при фокусе */
+#phone:focus::placeholder {
+  color: #ccc;
+  opacity: 1;
+  transition: color 0.2s ease;
+}
+
+/* Подсказка при неверном формате */
+#phone:invalid:not(:focus):not(:placeholder-shown) {
+  border-color: #ff6b6b;
+}
+
+#phone:invalid:not(:focus):not(:placeholder-shown) + .form-label {
+  color: #ff6b6b;
+}
+
+/* Стиль для поля с телефоном */
+#phone {
+  letter-spacing: 0.5px; /* Для лучшей читаемости формата */
+}
+
+/* Подсказка о формате (если нужно) */
+#phone::placeholder {
+  color: transparent;
+  transition: color 0.2s ease;
+}
+
+#phone:focus::placeholder {
+  color: #ccc;
+  content: "+7 (___) ___-__-__";
 }
 
 .modal-close {
     position: absolute;
-    top: 20px;
-    right: 20px;
+    top: 60px;
+    right: 60px;
     font-size: 24px;
     background: none;
     border: none;
     cursor: pointer;
     color: #999;
     transition: color 0.3s ease, transform 0.3s ease;
+    width: 26px;
+    height: 26px;
 }
+
+
+
+
+
+
 
 .modal-close:hover {
     color: #333;
@@ -109,8 +164,8 @@ body{
 }
 
 .modal-title {
-    font-size: 24px;
-    font-weight: 700;
+    font-size: 40px;
+    font-weight: normal ;
     margin-bottom: 30px;
     text-align: center;
     text-transform: uppercase;
@@ -164,9 +219,9 @@ body{
 }
 
 .submit-btn {
-    width: 100%;
-    padding: 15px;
-    background-color: #333;
+   
+    padding: 24px 69px;
+    background-color: var(--main);
     color: white;
     border: none;
     border-radius: 4px;
@@ -175,6 +230,7 @@ body{
     cursor: pointer;
     transition: background-color 0.3s ease;
     text-transform: uppercase;
+    border-radius: 100px;
 }
 
 .submit-btn:hover {
@@ -285,13 +341,18 @@ body{
   }
 
   .selector-text::after{
-    content: url(/image/select.svg);
+    content: url(./image/select.svg);
     position: absolute;
     width: 12px;
     height: 13px;
     right: 30px;
 
   }
+
+
+  
+
+
 
   .logo{
     margin-right: 323px;
@@ -316,8 +377,11 @@ body{
   }
 
 
-
-
+    .align-btn{
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+    }
 
 
 
