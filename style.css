@@ -166,7 +166,7 @@ body{
 .modal-title {
     font-size: 40px;
     font-weight: normal ;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
     text-align: center;
     text-transform: uppercase;
     color: #333;
@@ -201,6 +201,7 @@ body{
     font-size: 16px;
     transition: all 0.3s ease;
     pointer-events: none;
+    color: black;
 }
 
 .form-control:focus + .form-label,
@@ -319,37 +320,81 @@ body{
   }
   
 
-  .selector{
-    background: var(--main);
-    cursor: pointer;
-    border-radius: 100px;
-    width: 203px;
-    height: 43px;
-    align-items: center;
-    display: flex;
-    position: relative;
-    margin-right: 270px;
+/* Исходные стили (не меняем) */
+.selector {
+  background: var(--main);
+  cursor: pointer;
+  border-radius: 100px;
+  width: 203px;
+  height: 43px;
+  align-items: center;
+  display: flex;
+  position: relative;
+  margin-right: 270px;
+  overflow: hidden; /* Важно для анимации */
+}
+
+.selector-text {
+  color: white;
+  text-transform: uppercase;
+  font-size: 13px;
+  padding: 15px 10px 15px 20px;
+  font-family: 'Proxima Nova';
+  font-weight: 600;
+  position: relative;
+  display: inline-block;
+  transition: none; /* Отключаем стандартные переходы */
+}
+
+.selector-text::after {
+  content: url(./image/select.svg);
+  position: absolute;
+  width: 12px;
+  height: 13px;
+  right: -25px; /* Корректируем позицию относительно текста */
+  top: 50%;
+  transform: translateY(-50%);
+  transition: none;
+}
+
+/* Новая анимация с фиксированным позиционированием */
+@keyframes textSlide {
+  0%, 100% {
+      transform: translateY(0);
+      opacity: 1;
   }
-
-  .selector-text{
-    color: white;
-    text-transform: uppercase;
-    font-size: 13px;
-    padding: 15px  10px 15px 20px;
-    font-family: 'Proxima Nova';
-    font-weight: 600;
+  30% {
+      transform: translateY(-15px);
+      opacity: 0;
   }
-
-  .selector-text::after{
-    content: url(./image/select.svg);
-    position: absolute;
-    width: 12px;
-    height: 13px;
-    right: 30px;
-
+  31% {
+      transform: translateY(15px);
+      opacity: 0;
   }
+}
 
+@keyframes arrowSlide {
+  0%, 100% {
+      transform: translateY(-50%) rotate(0deg);
+      opacity: 1;
+  }
+  30% {
+      transform: translateY(-65%) rotate(-30deg);
+      opacity: 0;
+  }
+  31% {
+      transform: translateY(-35%) rotate(30deg);
+      opacity: 0;
+  }
+}
 
+.selector:hover .selector-text {
+  animation: textSlide 0.5s ease forwards;
+}
+
+.selector:hover .selector-text::after {
+  animation: arrowSlide 0.5s ease forwards;
+}
   
 
 
