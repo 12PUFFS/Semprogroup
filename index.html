@@ -3,17 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <script src="https://cdn.jsdelivr.net/npm/smooth-scrollbar@latest/dist/smooth-scrollbar.js"></script>
-<script src="/js/scroll.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 <body>
 
 
-    <div class="my-scrollbar">  <!-- Контейнер с фиксированной высотой -->
-        <div class="scroll-content">  <!-- Контент (должен быть больше контейнера) -->
+
             <div class="container">
                 <section id="nav" class="first-screen">
                     <header  class="header">
@@ -62,10 +60,23 @@
                             </a>
                         </div>
                         <div class="column">
-                            <!-- <div class="column-wth-img">
-                                <p class="desc">о проекте</p>
-                                <img src="/image/Mask group (6).png" alt="" class="column-img">
-                            </div> -->
+                            <div class="video-container">
+                                <!-- Миниатюра -->
+                                <div class="video-thumb" id="videoThumb">
+                                  <img src="/image/Mask group (6).png" alt="Превью видео">
+                                  <div class="play-btn">▶</div>
+                                </div>
+                                
+                                <!-- Фулскрин видео -->
+                                <div class="video-fullscreen" id="videoFullscreen">
+                                  <div class="video-wrapper">
+                                    <video id="mainVideo" controls>
+                                      <source src="/Mantera_promo_768.mp4" type="video/mp4">
+                                    </video>
+                                    <button class="close-btn" id="closeBtn">×</button>
+                                  </div>
+                                </div>
+                              </div>
                         </div>
                     </div>
                 </main>
@@ -110,32 +121,14 @@
                 </div>
             </div>
             
-        </div>
-      </div>
+
 
 
 
 <div class="container">
-    <div class="video-container">
-        <!-- Миниатюра -->
-        <div class="video-thumb" id="videoThumb">
-          <img src="/image/Mask group (6).png" alt="Превью видео">
-          <div class="play-btn">▶</div>
-        </div>
-        
-        <!-- Фулскрин видео -->
-        <div class="video-fullscreen" id="videoFullscreen">
-          <div class="video-wrapper">
-            <video id="mainVideo" controls>
-              <source src="/Mantera_promo_768.mp4" type="video/mp4">
-            </video>
-            <button class="close-btn" id="closeBtn">×</button>
-          </div>
-        </div>
-      </div>
+
       
-      <script src="https://cdn.jsdelivr.net/npm/smooth-scrollbar@latest/dist/smooth-scrollbar.js"></script>
-      <script src="scroll.js"></script>  <!-- Подключаем после элемента -->
+
 
 
     <script src="./js/index.js"></script>

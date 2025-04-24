@@ -1,12 +1,11 @@
-window.addEventListener('scroll', () => {
+// JS-реализация sticky-эффекта
+window.addEventListener('scroll', function() {
     const header = document.querySelector('.header');
-    const body = document.body;
+    const stickyStart = header.offsetTop;
     
-    if (window.scrollY > 10) {
+    if (window.pageYOffset > stickyStart) {
         header.classList.add('sticky');
-        body.classList.add('sticky-header-padding');
     } else {
         header.classList.remove('sticky');
-        body.classList.remove('sticky-header-padding');
     }
 });
