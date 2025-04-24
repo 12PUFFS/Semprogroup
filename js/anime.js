@@ -1,78 +1,67 @@
-document.addEventListener('DOMContentLoaded', function() {
+\document.addEventListener('DOMContentLoaded', function() {
     const videoThumb = document.getElementById('videoThumb');
     const videoFullscreen = document.getElementById('videoFullscreen');
-    const mainVideo = document.getElementById('mainVideo');
     const closeBtn = document.getElementById('closeBtn');
-    const videoSource = mainVideo.querySelector('source');
     
-    // 1. Полностью удаляем предзагрузку видео
-    videoSource.removeAttribute('src');
-    mainVideo.load();
-    
-    // 2. Инициализация анимации
+    // 1. Создаем видео ТОЛЬКО при клике
+    let mainVideo = null;
+    let videoLoaded = false;
+
+    // 2. Настройка анимаций
     gsap.set(videoFullscreen, {
         display: 'none',
         opacity: 0,
         scale: 0.95
     });
 
-    // 3. Контролы включаем только после загрузки
-    mainVideo.controls = false;
-  
-    // Функция для полноэкранного режима
-    async function openFullscreen() {
-        try {
-            await videoFullscreen.requestFullscreen?.() || 
-                  videoFullscreen.webkitRequestFullscreen?.();
-        } catch (e) {
-            console.error("Fullscreen error:", e);
-        }
+    // 3. Функция создания видео элемента
+    function createVideoElement() {
+        if (mainVideo) return mainVideo;
+        
+        const video = document.createElement('video');
+        video.id = 'mainVideo';
+        video.controls = true;
+        
+        const source = document.createElement('source');
+        source.src = videoThumb.dataset.videoSrc;
+        source.type = 'video/mp4';
+        
+        video.appendChild(source);
+        document.querySelector('.video-wrapper').appendChild(video);
+        
+        return video;
     }
-  
-    // Обработчик клика на миниатюру
+
+    // 4. Открытие видео
     videoThumb.addEventListener('click', async function() {
-        // 4. Загружаем видео только при первом клике
-        if (!videoSource.src) {
-            videoSource.src = videoThumb.dataset.videoSrc;
-            mainVideo.load();
-            
-            await new Promise(resolve => {
-                mainVideo.oncanplay = resolve;
-                mainVideo.onerror = resolve; // На случай ошибки
-            });
+        // Создаем элемент только при первом клике
+        if (!mainVideo) {
+            mainVideo = createVideoElement();
         }
         
-        // 5. Анимация открытия
+        // Показываем контейнер
+        gsap.set(videoFullscreen, { display: 'flex' });
+        
+        // Анимация
         gsap.to(videoFullscreen, {
-            display: 'flex',
             opacity: 1,
             scale: 1,
             duration: 0.3,
             ease: "power2.out",
             onComplete: async () => {
-                mainVideo.controls = true;
-                await openFullscreen();
+                if (!videoLoaded) {
+                    await mainVideo.play().catch(e => {
+                        mainVideo.muted = true;
+                        return mainVideo.play();
+                    });
+                    videoLoaded = true;
+                }
             }
         });
-    
-        // 6. Пытаемся воспроизвести
-        try {
-            mainVideo.muted = false;
-            await mainVideo.play().catch(() => {
-                mainVideo.muted = true;
-                return mainVideo.play();
-            });
-        } catch (e) {
-            console.error('Playback error:', e);
-        }
     });
-  
-    // Функция закрытия
+
+    // 5. Закрытие видео
     async function closeVideo() {
-        if (document.fullscreenElement) {
-            await document.exitFullscreen?.();
-        }
-        
         gsap.to(videoFullscreen, {
             opacity: 0,
             scale: 0.95,
@@ -80,16 +69,16 @@ document.addEventListener('DOMContentLoaded', function() {
             ease: "power2.in",
             onComplete: () => {
                 videoFullscreen.style.display = 'none';
-                mainVideo.pause();
-                mainVideo.currentTime = 0;
-                mainVideo.controls = false;
+                if (mainVideo) {
+                    mainVideo.pause();
+                    mainVideo.currentTime = 0;
+                }
             }
         });
     }
-  
+
     // Обработчики закрытия
     closeBtn.addEventListener('click', closeVideo);
     videoFullscreen.addEventListener('click', e => e.target === videoFullscreen && closeVideo());
     document.addEventListener('keydown', e => e.key === 'Escape' && closeVideo());
-    document.addEventListener('fullscreenchange', () => !document.fullscreenElement && closeVideo());
 });
