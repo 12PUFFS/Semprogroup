@@ -61,19 +61,20 @@
                         </div>
                         <div class="column">
                             <div class="video-container">
-                                <!-- Миниатюра -->
+                                <!-- Миниатюра видео с кнопкой воспроизведения -->
                                 <div class="video-thumb" id="videoThumb">
-                                  <img src="/image/Mask group (6).png" alt="Превью видео">
-                                  <div class="play-btn">▶</div>
+                                  <img src="/image/Mask group (6).png" alt="Превью видео" class="video-preview">
+                                  <div class="play-btn" aria-label="Воспроизвести видео">▶</div>
                                 </div>
                                 
-                                <!-- Фулскрин видео -->
+                                <!-- Полноэкранный режим видео -->
                                 <div class="video-fullscreen" id="videoFullscreen">
                                   <div class="video-wrapper">
-                                    <video id="mainVideo" controls>
+                                    <video id="mainVideo" controls preload="metadata">
                                       <source src="/Mantera_promo_768.mp4" type="video/mp4">
+                                      Ваш браузер не поддерживает видео тег.
                                     </video>
-                                    <button class="close-btn" id="closeBtn">×</button>
+                                    <button class="close-btn" id="closeBtn" aria-label="Закрыть видео">×</button>
                                   </div>
                                 </div>
                               </div>
