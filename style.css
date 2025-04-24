@@ -63,16 +63,17 @@ body {
 .video-thumb {
   width: 100%;
   height: 100%;
+  position: relative;
 }
 
-.video-thumb img {
+.video-preview {
   width: 100%;
   height: 100%;
   object-fit: cover;
   transition: transform 0.3s;
 }
 
-.video-thumb:hover img {
+.video-thumb:hover .video-preview {
   transform: scale(1.05);
 }
 
@@ -90,52 +91,27 @@ body {
   justify-content: center;
   font-size: 24px;
   color: white;
+  pointer-events: none;
 }
 
-.video-fullscreen {
+.video-overlay {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
- background: #000;
+  background: rgba(0,0,0,0.9);
   display: none;
   align-items: center;
   justify-content: center;
   z-index: 1000;
 }
 
-#videoFullscreen {
-  background: #000;
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1000;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.video-content {
-  max-width: 90%;
-  max-height: 90%;
-}
-
-
-.mainvideo source {
-  width: 1360px;
-}
-.video-wrapper {
-  position: relative;
-  width: 200%;
-
-}
-
-.video-wrapper video {
-  width: 100%;
-  max-height: 100vh;
+.video-overlay video {
+  width: 90%;
+  max-width: 1200px;
+  max-height: 90vh;
+  outline: none;
 }
 
 .close-btn {
@@ -147,6 +123,13 @@ body {
   color: white;
   font-size: 40px;
   cursor: pointer;
+  z-index: 1001;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.video-overlay:hover .close-btn {
+  opacity: 1;
 }
 
 body.video-open {
@@ -663,7 +646,7 @@ animation: textSlide 0.5s ease forwards;
 
   height: 506px;
 
-
+  background-position: center;
   background-repeat: no-repeat;
 
 }
@@ -743,9 +726,26 @@ position: relative;
   width: 567px;
 }
 
+.column{
+
+  margin-top: 109px;
+  display: flex
+;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+
 .columns{
   display: flex;
-  justify-content: space-between;
+  gap: 293px;
+}
+
+.lines{
+  width: 62px;
+  height: 13px;
+  background: var(--main);
 }
 
 
@@ -796,7 +796,7 @@ position: relative;
     background-image: url(/image/ewwe.png);
     height: 600px;
 
-
+    height: 100%;
 
     width: 100%;
   background-size: contain;

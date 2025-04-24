@@ -60,18 +60,26 @@
                             </a>
                         </div>
                         <div class="column">
-                            <div class="video-container">
-                                <div class="video-thumb" id="videoThumb" data-video-src="./Mantera_promo_768.mp4">
-                                    <img src="./image/Mask group (6).png" alt="Превью" loading="lazy">
-                                    <div class="play-btn">▶</div>
+
+                            <div class="column-text">
+                                <div class="lines"></div>
+                            </div>
+
+
+
+
+
+
+
+
+                            <div class="video-container" id="videoContainer">
+                                <div class="video-thumb">
+                                  <img src="./image/Mask group (6).png" alt="Превью видео" class="video-preview">
+                                  <div class="play-btn">Play</div>
                                 </div>
-                                
-                                <div class="video-fullscreen" id="videoFullscreen">
-                                    <div class="video-wrapper">
-                                        <!-- Видео будет создано скриптом -->
-                                        <button class="close-btn" id="closeBtn">×</button>
-                                    </div>
-                                </div>
+                                <video id="mainVideo" controls style="display:none;">
+                                  <source src="./Mantera_promo_768.mp4" type="video/mp4">
+                                </video>
                             </div>
                         </div>
                     </div>
