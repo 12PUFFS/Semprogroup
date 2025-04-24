@@ -859,14 +859,23 @@ position: relative;
     
   }
 
+  .botton-text p {
+    font-size: 31px;
+}
+
+  .botton-text img {
+    width: 862px;
+        height: 137px;
+  }
+
   .banner{  
-    background-image: url(/image/ewwe.png);
-    height: 600px;
+    background-image: url('/image/Mawe.jpg');
+    height: 550px;
+ 
+  background-position: center;
 
-    height: 100%;
-
-    width: 100%;
-  background-size: contain;
+   
+  background-size: cover;
 
   }
 
@@ -893,6 +902,7 @@ position: relative;
 
   .navbar{
     width: 1600px;
+    height: 131px;
   }
 
   .header{
