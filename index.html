@@ -61,23 +61,23 @@
                         </div>
                         <div class="column">
                             <div class="video-container">
-                                <!-- Миниатюра видео с кнопкой воспроизведения -->
-                                <div class="video-thumb" id="videoThumb">
-                                  <img src="./image/Mask group (6).png" alt="Превью видео" class="video-preview">
-                                  <div class="play-btn" aria-label="Воспроизвести видео">▶</div>
+                                <!-- Миниатюра с data-атрибутом -->
+                                <div class="video-thumb" id="videoThumb" data-video-src="./Mantera_promo_768.mp4">
+                                    <img src="./image/Mask group (6).png" alt="Превью видео" loading="lazy">
+                                    <div class="play-btn">▶</div>
                                 </div>
                                 
-                                <!-- Полноэкранный режим видео -->
+                                <!-- Контейнер для видео -->
                                 <div class="video-fullscreen" id="videoFullscreen">
-                                  <div class="video-wrapper">
-                                    <video id="mainVideo" controls preload="metadata">
-                                      <source src="./Mantera_promo_768.mp4" type="video/mp4">
-                                      Ваш браузер не поддерживает видео тег.
-                                    </video>
-                                    <button class="close-btn" id="closeBtn" aria-label="Закрыть видео">×</button>
-                                  </div>
+                                    <div class="video-wrapper">
+                                        <!-- Видео без предзагрузки -->
+                                        <video id="mainVideo">
+                                            <source type="video/mp4"> <!-- src будет установлен при клике -->
+                                        </video>
+                                        <button class="close-btn" id="closeBtn">×</button>
+                                    </div>
                                 </div>
-                              </div>
+                            </div>
                         </div>
                     </div>
                 </main>
