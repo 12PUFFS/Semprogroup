@@ -1123,7 +1123,7 @@ position: relative;
   }
 
   .banner {
-    background-image: url('./image/banner.png');
+    background-image: url('/image/banner.png');
     height: 487px;
     background-position: center;
     background-repeat: no-repeat;
@@ -1211,24 +1211,7 @@ position: relative;
     background-position: top center;
   }
 
-  .botton-text{ 
-    flex-direction: column;
-
-  }
-
-  .navbar {
-    width: 280px;
-    height: 81px;
-  }
-
-  .botton-text img{
-    width: 280px;
-  }
-  .columns{
-    display: none;
-  }
-
-  /* .tel {
+  .tel {
     width: 90px;
     height: 90px;
     display: block;
@@ -1270,7 +1253,7 @@ display: none;
 
   .center img {
     width: 130px ;
-    left: 46% ;
+    left: 47% ;
     transform: translateX(-50%);
     top: 27px;
   }
@@ -1313,7 +1296,17 @@ display: none;
     top: 18px;
     padding: 15px;
     position: absolute;
-    left: 84.9%;
+    left: 84%;
+
+
+
+
+
+ 
+  border: 1px solid #2F80ED; /* Толщина и цвет кольца */
+  border-radius: 50%;
+  background: transparent;
+    
   }
 
   
@@ -1321,6 +1314,6 @@ display: none;
     overflow-x: hidden;
   }
   
-   */
+  
 
 }
