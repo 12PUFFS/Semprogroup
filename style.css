@@ -1123,7 +1123,7 @@ position: relative;
   }
 
   .banner {
-    background-image: url('/image/banner.png');
+    background-image: url('./image/banner.png');
     height: 487px;
     background-position: center;
     background-repeat: no-repeat;
