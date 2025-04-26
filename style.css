@@ -1119,18 +1119,18 @@ position: relative;
 @media (min-width: 768px) and (max-width: 1023px){
   .container {
     max-width: 688px;
-    padding: 0 40px;
+    padding: 0 20px;
   }
 
   .banner {
-    background-image: url('/image/banner.png');
+    background-image: url('./image/banner.png');
     height: 487px;
     background-position: center;
     background-repeat: no-repeat;
   }
 
   .selector {
-    left: 213px;
+    left: 253px;
     width: 183px;
   }
 
@@ -1184,6 +1184,11 @@ position: relative;
 
   .navbar {
     position: relative;
+    width: 650px;
+  }
+
+  .header.sticky{ 
+    width: 650px;
   }
 
   .center img {
@@ -1296,7 +1301,7 @@ display: none;
     top: 18px;
     padding: 15px;
     position: absolute;
-    left: 84%;
+    left: 83%;
 
 
 
