@@ -1160,6 +1160,8 @@ position: relative;
     padding: 15px 15px 14px 14px;
     background: #000;
     border-radius: 100px;
+    
+    
   }
 
   .right-side {
@@ -1209,7 +1211,24 @@ position: relative;
     background-position: top center;
   }
 
-  .tel {
+  .botton-text{ 
+    flex-direction: column;
+
+  }
+
+  .navbar {
+    width: 280px;
+    height: 81px;
+  }
+
+  .botton-text img{
+    width: 280px;
+  }
+  .columns{
+    display: none;
+  }
+
+  /* .tel {
     width: 90px;
     height: 90px;
     display: block;
@@ -1220,7 +1239,7 @@ display: none;
   }
 
   .botton-text > img {
-    width: 280px; /* 320px - 40px padding */
+    width: 280px; 
     
   }
 
@@ -1251,7 +1270,7 @@ display: none;
 
   .center img {
     width: 130px ;
-    left: 52% ;
+    left: 46% ;
     transform: translateX(-50%);
     top: 27px;
   }
@@ -1284,18 +1303,24 @@ display: none;
     display: none;
   }
 
-  /* Адаптация текстов */
 
 
-  .tel {
+
+  .tel img {
     font-size: 12px;
+    background: #D7D7D7;
+    border-radius: 100px;
+    top: 18px;
+    padding: 15px;
+    position: absolute;
+    left: 84.9%;
   }
 
-  /* Исправление горизонтального скролла */
+  
   body {
     overflow-x: hidden;
   }
   
-  /* Дополнительные правки для элементов */
+   */
 
 }
