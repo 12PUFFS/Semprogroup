@@ -648,7 +648,7 @@ img{
 
 .center img{
   position: absolute;
-  left: 44%;
+  left: 43%;
   top: 32%;
 
 }
@@ -950,7 +950,7 @@ position: relative;
 
   .navbar {
       width: 608px;
-      height: 143px;
+      height: 123px;
       overflow: hidden;
   }
 
@@ -1125,6 +1125,7 @@ position: relative;
   .center img {
       width: 187px;
       height: 30px;
+      left: 44.5%;
   }
 
   .botton-text p {
