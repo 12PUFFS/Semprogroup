@@ -525,7 +525,7 @@ body.video-open {
   color: white;
   text-transform: uppercase;
   font-size: 13px;
-  padding: 15px 10px 15px 20px;
+  padding: 15px 0 15px 20px;
   font-family: 'Proxima Nova';
   font-weight: 600;
   position: relative;
@@ -560,20 +560,7 @@ body.video-open {
   }
 }
 
-@keyframes arrowSlide {
-  0%, 100% {
-      transform: translateY(-50%) rotate(0deg);
-      opacity: 1;
-  }
-  30% {
-      transform: translateY(-65%) rotate(-30deg);
-      opacity: 0;
-  }
-  31% {
-      transform: translateY(-35%) rotate(30deg);
-      opacity: 0;
-  }
-}
+
 
 .selector:hover .selector-text {
   animation: textSlide 1s ease forwards;
@@ -823,6 +810,10 @@ position: relative;
 
 }
 
+.tel{
+  display: none;
+}
+
 .text-content {
   text-align: left;
   margin-bottom: 40px;
@@ -911,230 +902,287 @@ position: relative;
 }
 
 
-/* Планшеты (верт., 768–1023px) */
-@media (min-width: 768px) {
-  .container {
+  /* Планшеты (верт., 768–1023px) */
+  /* Мобильные устройства (0–768px) */
+  @media (max-width: 768px) {
+    .container {
       max-width: 688px;
       padding: 0 40px;
-  }
+    }
+
+    .banner {
+    background-image: url('/image/banner.png');
+
+      height: 487px;
+      background-position: center ;
+      background-repeat: no-repeat; 
+  
+    }
+
+    .selector {
+      left: 236px;
+
+      width: 183px;
+    }
+
+    .botton-text > img {
+      width: 608px;
+    }
+
+    .selector * {
+      display: flex;
+      padding: 15.5px 10px 15.5px 18px;
+    }
+
+    .botton-text{
+      display: inline;
+    }
+
+    .selector-text::after{
+      right: -10px;
+    }
+
+    .tel {
+      display: block;
+    }
+
+
+    .right-side {
+      display: none;
+    }
+
+    .navbar {
+      width: 608px;
+      height: 143px;
+      overflow: hidden;
+    }
+
+    .header {
+      max-width: 608px;
+    }
+
+    
+.left-side{
+  gap: 0;
 }
 
-/* Горизонтальные планшеты/ноутбуки (1024–1280px) */
-@media (max-width: 1024px) {
-  .container {
+}
+.burger-menu {
+  margin-right: 62px;
+}
+
+    .main{
+      display: none;
+    }
+
+    .navbar {
+      position: relative;
+    }
+
+    .center img {
+      position: absolute;
+      width: 155px;
+      height: 25px;
+      top: 40%;
+      left: 225px;
+    }
+  
+
+
+  /* Планшеты (769–1024px) */
+  @media (min-width: 769px) and (max-width: 1024px) {
+    .container {
       max-width: 964px;
       padding: 0 30px;
       margin: 0 auto;
       overflow: hidden;
-  }
+    }
 
-  .video-thumb::after{
-    top: 12px ;
-    left: 12px;
+    .video-thumb::after {
+      top: 12px;
+      left: 12px;
+    }
 
-  }
+    .menu-line {
+      width: 69px;
+    }
 
-  .menu-line{
-    width: 69px;
-  }
+    .play-btn {
+      font-size: 10px;
+    }
 
-  .play-btn{
-    font-size: 10px;
-  }
+    .left-side *{
+      gap: 62px;
+    }
 
-  .banner{
-    background-image: url('./image/Mask\ group\ \(5\).png');
-    
-    height: 387px;
-  max-width: 964px;
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-  }
+    .banner {
+      background-image: ('./image/Mask group (5).png');
+      height: 387px;
+      max-width: 964px;
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
 
-  .botton-text img{
-    width: 554px;
-    height: 88px;
-  }
+    .botton-text img {
+      width: 554px;
+      height: 88px;
+    }
 
-.botton-text{
-  margin-top: 40px;
-}
+    .botton-text {
+      margin-top: 40px;
+    }
 
-.selector-text{
-  font-size: 12px;
-}
+    .selector-text {
+      font-size: 12px;
+    }
 
-  .main {
-    margin-top: 126px;
-    margin-bottom: 30px;
-}
+    .main {
+      margin-top: 126px;
+      margin-bottom: 30px;
+    }
 
-  .column-img {
-    width: 408px;
-    height: 514px;
-  }
+    .column-img {
+      width: 408px;
+      height: 514px;
+    }
 
-  .description{
-    font-size: 19px;
-  }
+    .description {
+      font-size: 19px;
+    }
 
-  .video-container{
-    width: 133px;
-    height: 133px;
-  }
+    .video-container {
+      width: 133px;
+      height: 133px;
+    }
 
-  .desc{
-    margin-bottom: 20px;
-  }
+    .desc {
+      margin-bottom: 20px;
+    }
 
-
-    .details{
+    .details {
       font-size: 12px;
       margin-top: 65px;
     }
-  .ablosute{
-    top: 95px;
-    left: 334px;
-    width: 148px;
-    height: 148px;
-    
+
+    .ablosute {
+      top: 95px;
+      left: 334px;
+      width: 148px;
+      height: 148px;
+    }
+
+    .text-line {
+      margin-bottom: 35px;
+    }
+
+    .selector {
+      width: 192px;
+    }
+
+    .header {
+      max-width: 964px;
+    }
+
+    .center img {
+      left: 38.5%;
+    }
+
+    .column {
+      width: 334px;
+    }
+
+    .navbar {
+      max-width: 903px;
+      height: 103px;
+    }
+
+    .columns {
+      gap: 100px;
+    }
+
+    .left-side, .right-side {
+      gap: 40px;
+    }
   }
-  .text-line{
-    margin-bottom: 35px;
+
+  /* Десктоп (1025–1280px) */
+  @media (min-width: 1025px) and (max-width: 1280px) {
+    .container {
+      max-width: 1200px;
+      padding: 0 40px;
+    }
+    /* Добавьте стили для этого диапазона */
   }
 
-  .selector {
-    width: 192px;
-  }
-
-  .header{
-    max-width: 964px;
-  }
-
-  .center img{
-    left: 38.5%;
-  }
-
-  .column{
-    width: 334px;
-  }
-
-  .navbar{
-    max-width: 903px;
-    height: 103px;
-  }
-
-  .columns{
-    gap: 100px;
-  }
-
-  .left-side, .right-side {
-
-    gap: 40px; /* Расстояние между элементами в группах */
-
-  }
-}
-
-/* Основной десктоп (1281–1769px) — НАЧИНАЕМ ОТСЮДА */
-@media (min-width: 1281px) {
-  .container {
+  /* Большие десктопы (1281–1769px) */
+  @media (min-width: 1281px) and (max-width: 1769px) {
+    .container {
       max-width: 1440px;
       padding: 0 40px;
+    }
+    /* Добавьте стили для этого диапазона */
   }
 
-  .banner{  
-
-  }
-
-}
-
-/* Большие десктопы (1770px+) */
-@media (min-width: 1770px) {
-  .container {
+  /* Очень большие экраны (1770px+) */
+  @media (min-width: 1770px) {
+    .container {
       max-width: 1760px;
       padding: 0 80px;
+    }
+
+    .center img {
+      width: 187px;
+      height: 30px;
+    }
+
+    .botton-text p {
+      font-size: 31px;
+    }
+
+    .botton-text img {
+      width: 862px;
+      height: 137px;
+    }
+
+    .ablosute {
+      top: 149px;
+      left: 604px;
+      width: 259px;
+      height: 259px;
+    }
+
+    .desc {
+      margin-bottom: 35px;
+    }
+
+    .column-img {
+      width: 733px;
+      height: 900px;
+    }
+
+    .columns {
+      gap: 293px;
+    }
+
+    .banner {
+      background-image: url('./image/Mawe.jpg');
+      height: 550px;
+      background-position: center;
+      background-size: cover;
+    }
+
+    .navbar {
+      width: 1600px;
+      height: 131px;
+    }
+
+    .header {
+      width: 1600px;
+    }
+
+    .burger-icon {
+      width: 38px;
+      height: 17px;
+    }
   }
-
-  .center img{
-    width: 187px;
-    height: 30px;
-    
-  }
-
-  .botton-text p {
-    font-size: 31px;
-}
-
-  .botton-text img {
-    width: 862px;
-        height: 137px;
-  }
-
-  .ablosute{
-    top: 149px;
-    left: 604px;
-    width: 259px;
-    height: 259px;
-  }
-  .desc{
-    margin-bottom: 35px;
-  }
-
-  .column-img{
-    width: 733px;
-    height: 900px;
-  }
-
-  .columns{
-    gap: 293px;
-  }
-
-  .banner{  
-    background-image: url('./image/Mawe.jpg');
-    height: 550px;
- 
-  background-position: center;
-
-   
-  background-size: cover;
-
-  }
-
-  .logo{
- 
-  }
-
-  .selector{
-
-  }
-
-  .botton-text{
-
-
-  }
-
-  .botton-text p{
-
-  }
-
-  .botton-text img{
-
-  }  
-
-  .navbar{
-    width: 1600px;
-    height: 131px;
-  }
-
-  .header{
-    width: 1600px;
-  }
-
-  .burger-icon {
-    width: 38px;
-    height: 17px;
-    
-    } 
-}
-
