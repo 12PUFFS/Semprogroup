@@ -992,7 +992,7 @@ position: relative;
 }
 
 /* Планшеты (769-1024px) */
-@media (min-width: 769px) and (max-width: 1024px) {
+@media (min-width: 1024px) and (max-width: 1280px)  {
   .container {
     max-width: 964px;
     padding: 0 30px;
@@ -1116,7 +1116,7 @@ position: relative;
 }
 
 /* Мобильные устройства (до 768px) */
-@media (max-width: 768px) {
+@media (min-width: 768px) and (max-width: 1023px){
   .container {
     max-width: 688px;
     padding: 0 40px;
@@ -1151,8 +1151,15 @@ position: relative;
     right: -10px;
   }
 
+  .left-side{
+    align-items: center;
+  }
+
   .tel {
     display: block;
+    padding: 15px 15px 14px 14px;
+    background: #000;
+    border-radius: 100px;
   }
 
   .right-side {
@@ -1187,7 +1194,7 @@ position: relative;
 }
 
 /* Мелкие мобильные (до 360px) */
-@media (max-width: 360px) {
+@media(max-width: 767px){
   .container {
     max-width: 320px; /* Фиксируем максимальную ширину */
     width: 100%;
@@ -1200,6 +1207,12 @@ position: relative;
     height: 313px;
     background-image: url('/image/Mask\ group\ \(9\).png');
     background-position: top center;
+  }
+
+  .tel {
+    width: 90px;
+    height: 90px;
+    display: block;
   }
 
   .selector {
@@ -1225,13 +1238,50 @@ display: none;
 
   .navbar {
     width: 280px;
-    padding: 15px 0;
+    height: 81px;
+  }
+
+  .right-side{
+    display: none;
+  }
+
+  .columns{
+    flex-direction: column;
   }
 
   .center img {
-    width: 130px !important;
-    left: 50% !important;
+    width: 130px ;
+    left: 52% ;
     transform: translateX(-50%);
+    top: 27px;
+  }
+
+  .burger-icon{
+    width: 29px;
+    
+  }
+
+  .top,
+  .middle,
+  .bottom{
+    background: #000;
+  }
+
+ 
+
+  .botton-text{
+    flex-direction: column;
+    height: 51px;
+    margin-top: 20px;
+    font-size: 13px;
+    align-items: flex-start;
+  }
+
+  .botton-text img{
+    margin-top: 20px;
+  }
+  .main{
+    display: none;
   }
 
   /* Адаптация текстов */
