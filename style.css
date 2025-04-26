@@ -1212,6 +1212,7 @@ position: relative;
   /* Корректируем все элементы под новую ширину */
   .banner {
     height: 313px;
+    width: 280px;
     background-image: url('./image/Mask\ group\ \(9\).png');
     background-position: top center;
   }
