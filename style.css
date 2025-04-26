@@ -904,285 +904,276 @@ position: relative;
 
   /* Планшеты (верт., 768–1023px) */
   /* Мобильные устройства (0–768px) */
-  @media (max-width: 768px) {
-    .container {
+  /* Мобильные устройства (0-768px) */
+@media (max-width: 768px) {
+  .container {
       max-width: 688px;
       padding: 0 40px;
-    }
+  }
 
-    .banner {
-    background-image: url('/image/banner.png');
-
+  .banner {
+      background-image: url('/image/banner.png');
       height: 487px;
-      background-position: center ;
-      background-repeat: no-repeat; 
-  
-    }
+      background-position: center;
+      background-repeat: no-repeat;
+  }
 
-    .selector {
-      left: 236px;
-
+  .selector {
+      left: 213px;
       width: 183px;
-    }
+  }
 
-    .botton-text > img {
+  .botton-text > img {
       width: 608px;
-    }
+  }
 
-    .selector * {
+  .selector * {
       display: flex;
       padding: 15.5px 10px 15.5px 18px;
-    }
+  }
 
-    .botton-text{
+  .botton-text {
       display: inline;
-    }
+  }
 
-    .selector-text::after{
+  .selector-text::after {
       right: -10px;
-    }
+  }
 
-    .tel {
+  .tel {
       display: block;
-    }
+  }
 
-
-    .right-side {
+  .right-side {
       display: none;
-    }
+  }
 
-    .navbar {
+  .navbar {
       width: 608px;
       height: 143px;
       overflow: hidden;
-    }
+  }
 
-    .header {
+  .header {
       max-width: 608px;
-    }
+  }
 
-    
-.left-side{
-  gap: 0;
-}
-
-}
-.burger-menu {
-  margin-right: 62px;
-}
-
-    .main{
+  .main {
       display: none;
-    }
+  }
 
-    .navbar {
+  .navbar {
       position: relative;
-    }
+  }
 
-    .center img {
+  .center img {
       position: absolute;
       width: 155px;
       height: 25px;
       top: 40%;
-      left: 225px;
-    }
-  
+      left: 220px;
+  }
+}
 
-
-  /* Планшеты (769–1024px) */
-  @media (min-width: 769px) and (max-width: 1024px) {
-    .container {
-      max-width: 964px;
+/* Планшеты (769-1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .container {
+      width: 964px;
       padding: 0 30px;
       margin: 0 auto;
       overflow: hidden;
-    }
+  }
 
-    .video-thumb::after {
+  .header {
+      max-width: 964px;
+  }
+
+  .navbar {
+      max-width: 964px;
+  }
+
+  .center img {
+      left: 42%;
+  }
+
+  .video-thumb::after {
       top: 12px;
       left: 12px;
-    }
+  }
 
-    .menu-line {
+  .menu-line {
       width: 69px;
-    }
+  }
 
-    .play-btn {
+  .play-btn {
       font-size: 10px;
-    }
+  }
 
-    .left-side *{
+  .left-side {
       gap: 62px;
-    }
+  }
 
-    .banner {
-      background-image: ('./image/Mask group (5).png');
-      height: 387px;
-      max-width: 964px;
+  .banner {
+      background-image: url('./image/Mask group (5).png');
+      height: 411px;
       background-position: center;
       background-size: contain;
       background-repeat: no-repeat;
-    }
+  }
 
-    .botton-text img {
+  .botton-text img {
       width: 554px;
       height: 88px;
-    }
+  }
 
-    .botton-text {
+  .botton-text {
       margin-top: 40px;
-    }
+  }
 
-    .selector-text {
+  .selector-text {
       font-size: 12px;
-    }
+  }
 
-    .main {
+  .main {
       margin-top: 126px;
       margin-bottom: 30px;
-    }
+  }
 
-    .column-img {
+  .column-img {
       width: 408px;
       height: 514px;
-    }
+  }
 
-    .description {
+  .description {
       font-size: 19px;
-    }
+  }
 
-    .video-container {
+  .video-container {
       width: 133px;
       height: 133px;
-    }
+  }
 
-    .desc {
+  .desc {
       margin-bottom: 20px;
-    }
+  }
 
-    .details {
+  .details {
       font-size: 12px;
       margin-top: 65px;
-    }
+  }
 
-    .ablosute {
+  .ablosute {
       top: 95px;
       left: 334px;
       width: 148px;
       height: 148px;
-    }
+  }
 
-    .text-line {
+  .text-line {
       margin-bottom: 35px;
-    }
+  }
 
-    .selector {
+  .selector {
       width: 192px;
-    }
+  }
 
-    .header {
-      max-width: 964px;
-    }
-
-    .center img {
+  .center img {
       left: 38.5%;
-    }
+  }
 
-    .column {
+  .column {
       width: 334px;
-    }
+  }
 
-    .navbar {
+  .navbar {
       max-width: 903px;
       height: 103px;
-    }
-
-    .columns {
-      gap: 100px;
-    }
-
-    .left-side, .right-side {
-      gap: 40px;
-    }
   }
 
-  /* Десктоп (1025–1280px) */
-  @media (min-width: 1025px) and (max-width: 1280px) {
-    .container {
+  .columns {
+      gap: 100px;
+  }
+
+  .left-side, .right-side {
+      gap: 40px;
+  }
+}
+
+/* Десктопы (1025-1280px) */
+@media (min-width: 1025px) and (max-width: 1280px) {
+  .container {
       max-width: 1200px;
       padding: 0 40px;
-    }
-    /* Добавьте стили для этого диапазона */
   }
+}
 
-  /* Большие десктопы (1281–1769px) */
-  @media (min-width: 1281px) and (max-width: 1769px) {
-    .container {
+/* Большие десктопы (1281-1769px) */
+@media (min-width: 1281px) and (max-width: 1769px) {
+  .container {
       max-width: 1440px;
       padding: 0 40px;
-    }
-    /* Добавьте стили для этого диапазона */
   }
+}
 
-  /* Очень большие экраны (1770px+) */
-  @media (min-width: 1770px) {
-    .container {
+/* Очень большие экраны (1770px+) */
+@media (min-width: 1770px) {
+  .container {
       max-width: 1760px;
       padding: 0 80px;
-    }
+  }
 
-    .center img {
+  .center img {
       width: 187px;
       height: 30px;
-    }
+  }
 
-    .botton-text p {
+  .botton-text p {
       font-size: 31px;
-    }
+  }
 
-    .botton-text img {
+  .botton-text img {
       width: 862px;
       height: 137px;
-    }
+  }
 
-    .ablosute {
+  .ablosute {
       top: 149px;
       left: 604px;
       width: 259px;
       height: 259px;
-    }
+  }
 
-    .desc {
+  .desc {
       margin-bottom: 35px;
-    }
+  }
 
-    .column-img {
+  .column-img {
       width: 733px;
       height: 900px;
-    }
+  }
 
-    .columns {
+  .columns {
       gap: 293px;
-    }
+  }
 
-    .banner {
+  .banner {
       background-image: url('./image/Mawe.jpg');
       height: 550px;
       background-position: center;
       background-size: cover;
-    }
+  }
 
-    .navbar {
+  .navbar {
       width: 1600px;
       height: 131px;
-    }
+  }
 
-    .header {
+  .header {
       width: 1600px;
-    }
+  }
 
-    .burger-icon {
+  .burger-icon {
       width: 38px;
       height: 17px;
-    }
   }
+}
