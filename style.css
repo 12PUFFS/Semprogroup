@@ -1137,6 +1137,7 @@ position: relative;
   .botton-text > img {
     width: 608px;
   }
+  
 
   .selector * {
     display: flex;
@@ -1161,7 +1162,9 @@ position: relative;
     background: #000;
     border-radius: 100px;
     
-    
+    border: 1px solid #D7D7D7; /* Толщина и цвет кольца */
+    border-radius: 50%;
+    background: transparent;
   }
 
   .right-side {
@@ -1175,7 +1178,7 @@ position: relative;
   }
 
   .header {
-    max-width: 608px;
+    max-width: 650px;
   }
 
   .main {
@@ -1196,7 +1199,7 @@ position: relative;
     width: 155px;
     height: 25px;
     top: 40%;
-    left: 220px;
+    left: 240px;
   }
 }
 
