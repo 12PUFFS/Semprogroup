@@ -1232,7 +1232,7 @@ position: relative;
 
   /* Корректируем все элементы под новую ширину */
   .banner {
-    height: 313px;
+    height: 450px;
     width: 299px;
     background-image: url('./image/Mask\ group\ \(9\).png');
     background-position: top center;
@@ -1280,7 +1280,7 @@ display: none;
 
   .center img {
     width: 130px ;
-    left: 52% ;
+    left: 49% ;
     transform: translateX(-50%);
     top: 27px;
   }
