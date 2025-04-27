@@ -1000,8 +1000,8 @@ position: relative;
 /* Планшеты и маленькие десктопы (769px-1024px) */
 @media (min-width: 769px) and (max-width: 1024px) {
   .container {
-    max-width: 964px;
-    padding: 0 30px;
+    width: 964px;
+    
     margin: 0 auto;
     overflow: hidden;
   }
@@ -1039,7 +1039,7 @@ position: relative;
     background-image: url('./image/Mask group (5).png');
     height: 411px;
     background-position: center;
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
   }
 
@@ -1054,6 +1054,9 @@ position: relative;
 
   .selector-text {
     font-size: 12px;
+  }
+  .header{
+    max-width: 964px;
   }
 
   .main {
@@ -1125,8 +1128,8 @@ position: relative;
 @media (min-width: 768px) and (max-width: 768px) {
   .container {
     max-width: 688px;
-    width: 100%;
-    padding: 0 20px;
+ 
+   
   }
 
   .banner {
@@ -1178,8 +1181,41 @@ position: relative;
     display: none;
   }
 
+  .botton-text p{
+    margin-top: 40px;
+  }
+
+  .video-container{
+    width: 133px;
+    height: 133px;
+  }
+
+  .text-content{
+    margin-bottom: 30px;
+  }
+
+  .column{
+    margin-top: 80px;
+  }
+
+  
+.video-thumb::after {
+  width: 79px;
+  height: 79px;
+  top: 12px;
+  left: 12px;
+  -webkit-mask: radial-gradient(circle at center, transparent 50px, black 55px);
+  mask: radial-gradient(circle at center, transparent 50px, black 51px);
+  top: 38px;
+}
+
+  .details{
+    margin-top: 0;
+    font-size: 12px;
+  }
+
   .navbar {
-    width: 608px;
+    width: 668px;
     height: 143px;
     overflow: hidden;
   }
@@ -1194,10 +1230,16 @@ position: relative;
 
   .columns{
     position: absolute;
-    left: 0;
+    left: -9px;
+    gap: 94px;
   }
 
-  .column-wth-img img{
+  .columns{
+    width: 334px;
+    padding-bottom: 40px;
+  }
+
+  .column-wth-img > img{
     width: 290px;
     height: 408px;
   }
@@ -1207,8 +1249,20 @@ position: relative;
     width: 650px;
   }
 
-  .header.sticky{ 
-    width: 650px;
+  .header .sticky{ 
+    width: 990px;
+  }
+
+  .video-thumb {
+    width: fit-content;
+    height: fit-content;
+  }
+
+  .ablosute{
+    width: 81px;
+    height: 81px;
+    top: 79px;
+    left: 249px;
   }
 
   .center img {
@@ -1221,6 +1275,14 @@ position: relative;
 
   .desc{
     font-size: 11px;
+  }
+
+  .description{
+    font-size: 19px;
+  }
+
+  .botton-text img{
+    width: 648px;
   }
 }
 
@@ -1243,6 +1305,11 @@ position: relative;
   
 }
 
+.column-wth-img img{
+  left: -20px;
+  position: relative;
+}
+
   .banner {
     height: 313px;
     width: 340px;
@@ -1253,6 +1320,17 @@ position: relative;
   .first-screen {
     height: 100%;
    
+}
+
+.tel img{
+  left: 87%;
+}
+
+.ablosute{
+  top: -400px;
+  left: 253px;
+  width: 87px;
+  height: 87px;
 }
 
   .tel {
@@ -1317,8 +1395,17 @@ position: relative;
   .botton-text img{
     margin-top: 20px;
   }
-  .main{
-    display: none;
+  .column-wth-img img{
+    width: 296px;
+    height: 403px;
+  }
+
+  .column{
+    width: 340px;
+  }
+
+  .columns{
+    gap: 40px;
   }
 
   .navbar{
