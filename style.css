@@ -913,6 +913,7 @@ position: relative;
 
 
 
+/* Очень большие десктопы (1770px+) */
 @media (min-width: 1770px) {
   .container {
     max-width: 1760px;
@@ -975,7 +976,7 @@ position: relative;
   }
 }
 
-/* Большие десктопы (1281-1769px) */
+/* Большие десктопы (1281px-1769px) */
 @media (min-width: 1281px) and (max-width: 1769px) {
   .container {
     max-width: 1440px;
@@ -984,7 +985,7 @@ position: relative;
   }
 }
 
-/* Десктопы (1025-1280px) */
+/* Стандартные десктопы (1025px-1280px) */
 @media (min-width: 1025px) and (max-width: 1280px) {
   .container {
     max-width: 1200px;
@@ -992,8 +993,8 @@ position: relative;
   }
 }
 
-/* Планшеты (769-1024px) */
-@media (min-width: 1024px) and (max-width: 1280px)  {
+/* Планшеты и маленькие десктопы (769px-1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
   .container {
     max-width: 964px;
     padding: 0 30px;
@@ -1116,8 +1117,8 @@ position: relative;
   }
 }
 
-/* Мобильные устройства (до 768px) */
-@media (min-width: 768px) and (max-width: 1023px){
+/* Горизонтальные мобильные (768px) */
+@media (min-width: 768px) and (max-width: 768px) {
   .container {
     max-width: 688px;
     width: 100%;
@@ -1164,7 +1165,7 @@ position: relative;
     background: #000;
     border-radius: 100px;
     
-    border: 1px solid #D7D7D7; /* Толщина и цвет кольца */
+    border: 1px solid #D7D7D7;
     border-radius: 50%;
     background: transparent;
   }
@@ -1203,20 +1204,17 @@ position: relative;
     top: 40%;
     left: 240px;
   }
-
-  
 }
 
-/* Мелкие мобильные (до 360px) */
-@media(max-width: 767px){
+/* Вертикальные мобильные (до 767px) */
+@media (max-width: 767px) {
   .container {
-    max-width: 320px; /* Фиксируем максимальную ширину */
+    max-width: 320px;
     width: 100%;
-    padding: 0 20px; /* Добавляем боковые отступы */
-    box-sizing: border-box; /* Важно! Чтобы padding не увеличивал общую ширину */
+    padding: 0 20px;
+    box-sizing: border-box;
   }
 
-  /* Корректируем все элементы под новую ширину */
   .banner {
     height: 313px;
     width: 280px;
@@ -1231,7 +1229,7 @@ position: relative;
   }
 
   .selector {
-display: none;
+    display: none;
   }
 
   .botton-text > img {
@@ -1282,8 +1280,6 @@ display: none;
     background: #000;
   }
 
- 
-
   .botton-text{
     flex-direction: column;
     height: 51px;
@@ -1299,9 +1295,6 @@ display: none;
     display: none;
   }
 
-
-
-
   .tel img {
     font-size: 12px;
     background: #D7D7D7;
@@ -1310,23 +1303,14 @@ display: none;
     padding: 15px;
     position: absolute;
     left: 83%;
-
-
-
-
-
  
-  border: 1px solid #2F80ED; /* Толщина и цвет кольца */
+  border: 1px solid #2F80ED;
   border-radius: 50%;
   background: transparent;
     
   }
 
-  
   body {
     overflow-x: hidden;
   }
-  
-  
-
 }
