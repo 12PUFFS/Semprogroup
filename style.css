@@ -1189,7 +1189,17 @@ position: relative;
   }
 
   .main {
-    display: none;
+    
+  }
+
+  .columns{
+    position: absolute;
+    left: 0;
+  }
+
+  .column-wth-img img{
+    width: 290px;
+    height: 408px;
   }
 
   .navbar {
@@ -1207,6 +1217,10 @@ position: relative;
     height: 25px;
     top: 40%;
     left: 240px;
+  }
+
+  .desc{
+    font-size: 11px;
   }
 }
 
@@ -1238,7 +1252,7 @@ position: relative;
 
   .first-screen {
     height: 100%;
-    width: 355px;
+   
 }
 
   .tel {
