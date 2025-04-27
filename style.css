@@ -286,7 +286,6 @@ body.video-open {
 
 .first-screen{
   height: 100%;
-  min-height: 100vh;
 }
 
 
@@ -914,15 +913,6 @@ position: relative;
 
 
 
-/* Очень большие десктопы (1770px+) */
-/* Базовые стили контейнера */
-.container {
-  width: 100%;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-/* 1770px и выше (1920) */
 @media (min-width: 1770px) {
   .container {
     max-width: 1760px;
@@ -932,7 +922,6 @@ position: relative;
   .center img {
     width: 187px;
     height: 30px;
-    left: 45%;
   }
 
   .botton-text p {
@@ -986,33 +975,35 @@ position: relative;
   }
 }
 
-
-/* 1281-1769px (1440) */
+/* Большие десктопы (1281px-1769px) */
 @media (min-width: 1281px) and (max-width: 1769px) {
   .container {
-    max-width: 1360px;
+    width: 1440px;
+ 
+    padding: 0 40px;
+  }
+}
+
+/* Стандартные десктопы (1025px-1280px) */
+@media (min-width: 1025px) and (max-width: 1280px) {
+  .container {
+    width: 1200px;
     padding: 0 40px;
   }
 
-  .navbar{
-    max-width: 1280px;
-  }
-
-  .center img{
-    left: 42.5%;
-  }
-
   .header{
-    max-width: 1280px;
+    width: 1120px;
   }
-
 }
 
-/* 1024-1280px */
-@media (min-width: 1024px) and (max-width: 1280px) {
+
+/* Планшеты и маленькие десктопы (769px-1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
   .container {
     max-width: 964px;
     padding: 0 30px;
+    margin: 0 auto;
+    overflow: hidden;
   }
 
   .header {
@@ -1122,7 +1113,7 @@ position: relative;
   }
 
   .columns {
-    gap: 148px;
+    gap: 100px;
   }
 
   .left-side, .right-side {
@@ -1130,11 +1121,12 @@ position: relative;
   }
 }
 
-/* 768-1023px */
-@media (min-width: 768px) and (max-width: 1023px) {
+/* Горизонтальные мобильные (768px) */
+@media (min-width: 768px) and (max-width: 768px) {
   .container {
-    max-width: 680px;
-    padding: 0 40px;
+    max-width: 688px;
+    width: 100%;
+    padding: 0 20px;
   }
 
   .banner {
@@ -1144,21 +1136,19 @@ position: relative;
     background-repeat: no-repeat;
   }
 
-  
+  .selector {
+    left: 253px;
+    width: 183px;
+  }
 
   .botton-text > img {
     width: 608px;
   }
-  .selector {
-    left: 206px;
-    width: 180px;
-}
   
 
   .selector * {
     display: flex;
     padding: 15.5px 10px 15.5px 18px;
-    font-size: 12px;
   }
 
   .botton-text {
@@ -1171,7 +1161,6 @@ position: relative;
 
   .left-side{
     align-items: center;
-    gap: 43px;
   }
 
   .tel {
@@ -1196,7 +1185,7 @@ position: relative;
   }
 
   .header {
-    width: 608px;
+    max-width: 650px;
   }
 
   .main {
@@ -1209,7 +1198,7 @@ position: relative;
   }
 
   .header.sticky{ 
-    max-width: 608px;
+    width: 650px;
   }
 
   .center img {
@@ -1217,31 +1206,39 @@ position: relative;
     width: 155px;
     height: 25px;
     top: 40%;
-    left: 210px;
+    left: 240px;
   }
 }
 
-/* 360-767px */
+/* Вертикальные мобильные (до 767px) */
 @media (max-width: 767px) {
   .container {
-    max-width: 320px;
+    width: 380px;
+ 
     padding: 0 20px;
+    box-sizing: border-box;
   }
+
+  .first-screen{
+    max-width: 340px;
+  }
+
+.header {
+  max-width: 340px;
+  height: 81px;
+  
+}
 
   .banner {
     height: 313px;
-    max-width: 320px;
+    width: 340px;
     background-image: url('./image/Mask\ group\ \(9\).png');
-    background-position: top center;
+    background-size: cover;
   }
 
   .first-screen {
     height: 100%;
-    max-width: 280px;
-}
-
-.first-screen{
-  height: 539px;
+    width: 355px;
 }
 
   .tel {
@@ -1255,7 +1252,7 @@ position: relative;
   }
 
   .botton-text > img {
-    width: 280px; 
+    width: 340px; 
     
   }
 
@@ -1267,14 +1264,7 @@ position: relative;
     display: none;
   }
 
-  .header{
-    width: 280px;
-  }
 
-  .navbar {
-    width: 280px;
-    height: 81px;
-  }
 
   .right-side{
     display: none;
@@ -1317,6 +1307,14 @@ position: relative;
     display: none;
   }
 
+  .navbar{
+    height: 81px;
+  }
+
+  .left-side{
+    height: 41px;
+  }
+
   .tel img {
     font-size: 12px;
     background: #D7D7D7;
@@ -1325,7 +1323,7 @@ position: relative;
     padding: 15px;
     position: absolute;
     left: 83%;
- 
+ padding: 14px 14px 13px 13px;
   border: 1px solid #2F80ED;
   border-radius: 50%;
   background: transparent;
@@ -1334,119 +1332,5 @@ position: relative;
 
   body {
     overflow-x: hidden;
-  }
-}
-
-/* Пример адаптации навигации */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-/* Адаптация логотипа */
-.logo {
-  width: 156px;
-  height: auto;
-}
-
-@media (min-width: 1770px) {
-  .logo {
-    width: 187px;
-  }
-}
-
-/* Пример адаптации баннера */
-.banner {
-  height: 506px;
-  background-size: cover;
-}
-
-@media (min-width: 1770px) {
-  .banner {
-    height: 600px;
-  }
-}
-
-@media (max-width: 1023px) {
-  .banner {
-    height: 400px;
-  }
-}
-
-@media (max-width: 767px) {
-  .banner {
-    height: 300px;
-  }
-}
-
-/* Адаптация типографики */
-h1 {
-  font-size: 24px;
-}
-
-@media (min-width: 1024px) {
-  h1 {
-    font-size: 32px;
-  }
-}
-
-@media (min-width: 1281px) {
-  h1 {
-    font-size: 40px;
-  }
-}
-
-/* Пример адаптации кнопки */
-.button {
-  padding: 12px 24px;
-  font-size: 14px;
-}
-
-@media (min-width: 1024px) {
-  .button {
-    padding: 16px 32px;
-    font-size: 16px;
-  }
-}
-
-/* Скрытие/показ элементов */
-.desktop-only {
-  display: block;
-}
-
-.mobile-only {
-  display: none;
-}
-
-@media (min-width: 395px) and (max-width: 767px) {
-  .desktop-only {
-    display: none;
-  }
-
-  .first-screen {
-    height: 539px;
-    max-width: 395px;
-}
-
-.header, .navbar{
-  width: 355px;
-}
-
-.tel img{
-  left: 85%;
-}
-
-.banner{
-  max-width: 373px;
-}
-
-  .container {
-    max-width: 395px;
-    padding: 0 20px;
-}
-  
-  .mobile-only {
-    display: block;
   }
 }
