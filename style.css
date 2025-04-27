@@ -979,6 +979,7 @@ position: relative;
 @media (min-width: 1281px) and (max-width: 1769px) {
   .container {
     max-width: 1440px;
+    width: 100%;
     padding: 0 40px;
   }
 }
@@ -1119,6 +1120,7 @@ position: relative;
 @media (min-width: 768px) and (max-width: 1023px){
   .container {
     max-width: 688px;
+    width: 100%;
     padding: 0 20px;
   }
 
