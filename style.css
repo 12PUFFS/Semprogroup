@@ -1306,8 +1306,7 @@ position: relative;
 }
 
 .column-wth-img img{
-  left: -20px;
-  position: relative;
+
 }
 
   .banner {
@@ -1320,17 +1319,6 @@ position: relative;
   .first-screen {
     height: 100%;
    
-}
-
-.tel img{
-  left: 87%;
-}
-
-.ablosute{
-  top: -400px;
-  left: 253px;
-  width: 87px;
-  height: 87px;
 }
 
   .tel {
@@ -1392,16 +1380,16 @@ position: relative;
     align-items: flex-start;
   }
 
+  .columns{
+    display: none;
+  }
+
   .botton-text img{
     margin-top: 20px;
   }
   .column-wth-img img{
     width: 296px;
     height: 403px;
-  }
-
-  .column{
-    width: 340px;
   }
 
   .columns{
@@ -1423,7 +1411,7 @@ position: relative;
     top: 18px;
     padding: 15px;
     position: absolute;
-    left: 83%;
+    left: 87%;
  padding: 14px 14px 13px 13px;
   border: 1px solid #2F80ED;
   border-radius: 50%;
