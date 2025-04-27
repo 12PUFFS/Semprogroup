@@ -286,6 +286,7 @@ body.video-open {
 
 .first-screen{
   height: 100%;
+  min-height: 100vh;
 }
 
 
@@ -914,6 +915,14 @@ position: relative;
 
 
 /* Очень большие десктопы (1770px+) */
+/* Базовые стили контейнера */
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* 1770px и выше (1920) */
 @media (min-width: 1770px) {
   .container {
     max-width: 1760px;
@@ -923,6 +932,7 @@ position: relative;
   .center img {
     width: 187px;
     height: 30px;
+    left: 45%;
   }
 
   .botton-text p {
@@ -976,30 +986,33 @@ position: relative;
   }
 }
 
-/* Большие десктопы (1281px-1769px) */
+
+/* 1281-1769px (1440) */
 @media (min-width: 1281px) and (max-width: 1769px) {
   .container {
-    max-width: 1440px;
-    width: 100%;
+    max-width: 1360px;
     padding: 0 40px;
   }
-}
 
-/* Стандартные десктопы (1025px-1280px) */
-@media (min-width: 1025px) and (max-width: 1280px) {
-  .container {
-    max-width: 1200px;
-    padding: 0 40px;
+  .navbar{
+    max-width: 1280px;
   }
+
+  .center img{
+    left: 42.5%;
+  }
+
+  .header{
+    max-width: 1280px;
+  }
+
 }
 
-/* Планшеты и маленькие десктопы (769px-1024px) */
-@media (min-width: 769px) and (max-width: 1024px) {
+/* 1024-1280px */
+@media (min-width: 1024px) and (max-width: 1280px) {
   .container {
     max-width: 964px;
     padding: 0 30px;
-    margin: 0 auto;
-    overflow: hidden;
   }
 
   .header {
@@ -1109,7 +1122,7 @@ position: relative;
   }
 
   .columns {
-    gap: 100px;
+    gap: 148px;
   }
 
   .left-side, .right-side {
@@ -1117,12 +1130,11 @@ position: relative;
   }
 }
 
-/* Горизонтальные мобильные (768px) */
-@media (min-width: 768px) and (max-width: 768px) {
+/* 768-1023px */
+@media (min-width: 768px) and (max-width: 1023px) {
   .container {
-    max-width: 688px;
-    width: 100%;
-    padding: 0 20px;
+    max-width: 680px;
+    padding: 0 40px;
   }
 
   .banner {
@@ -1132,19 +1144,21 @@ position: relative;
     background-repeat: no-repeat;
   }
 
-  .selector {
-    left: 253px;
-    width: 183px;
-  }
+  
 
   .botton-text > img {
     width: 608px;
   }
+  .selector {
+    left: 206px;
+    width: 180px;
+}
   
 
   .selector * {
     display: flex;
     padding: 15.5px 10px 15.5px 18px;
+    font-size: 12px;
   }
 
   .botton-text {
@@ -1157,6 +1171,7 @@ position: relative;
 
   .left-side{
     align-items: center;
+    gap: 43px;
   }
 
   .tel {
@@ -1181,7 +1196,7 @@ position: relative;
   }
 
   .header {
-    max-width: 650px;
+    width: 608px;
   }
 
   .main {
@@ -1194,7 +1209,7 @@ position: relative;
   }
 
   .header.sticky{ 
-    width: 650px;
+    max-width: 608px;
   }
 
   .center img {
@@ -1202,25 +1217,32 @@ position: relative;
     width: 155px;
     height: 25px;
     top: 40%;
-    left: 240px;
+    left: 210px;
   }
 }
 
-/* Вертикальные мобильные (до 767px) */
+/* 360-767px */
 @media (max-width: 767px) {
   .container {
     max-width: 320px;
-    width: 100%;
     padding: 0 20px;
-    box-sizing: border-box;
   }
 
   .banner {
     height: 313px;
-    width: 280px;
+    max-width: 320px;
     background-image: url('./image/Mask\ group\ \(9\).png');
     background-position: top center;
   }
+
+  .first-screen {
+    height: 100%;
+    max-width: 280px;
+}
+
+.first-screen{
+  height: 539px;
+}
 
   .tel {
     width: 90px;
@@ -1312,5 +1334,119 @@ position: relative;
 
   body {
     overflow-x: hidden;
+  }
+}
+
+/* Пример адаптации навигации */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Адаптация логотипа */
+.logo {
+  width: 156px;
+  height: auto;
+}
+
+@media (min-width: 1770px) {
+  .logo {
+    width: 187px;
+  }
+}
+
+/* Пример адаптации баннера */
+.banner {
+  height: 506px;
+  background-size: cover;
+}
+
+@media (min-width: 1770px) {
+  .banner {
+    height: 600px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .banner {
+    height: 400px;
+  }
+}
+
+@media (max-width: 767px) {
+  .banner {
+    height: 300px;
+  }
+}
+
+/* Адаптация типографики */
+h1 {
+  font-size: 24px;
+}
+
+@media (min-width: 1024px) {
+  h1 {
+    font-size: 32px;
+  }
+}
+
+@media (min-width: 1281px) {
+  h1 {
+    font-size: 40px;
+  }
+}
+
+/* Пример адаптации кнопки */
+.button {
+  padding: 12px 24px;
+  font-size: 14px;
+}
+
+@media (min-width: 1024px) {
+  .button {
+    padding: 16px 32px;
+    font-size: 16px;
+  }
+}
+
+/* Скрытие/показ элементов */
+.desktop-only {
+  display: block;
+}
+
+.mobile-only {
+  display: none;
+}
+
+@media (min-width: 395px) and (max-width: 767px) {
+  .desktop-only {
+    display: none;
+  }
+
+  .first-screen {
+    height: 539px;
+    max-width: 395px;
+}
+
+.header, .navbar{
+  width: 355px;
+}
+
+.tel img{
+  left: 85%;
+}
+
+.banner{
+  max-width: 373px;
+}
+
+  .container {
+    max-width: 395px;
+    padding: 0 20px;
+}
+  
+  .mobile-only {
+    display: block;
   }
 }
