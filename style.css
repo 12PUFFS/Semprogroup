@@ -38,11 +38,7 @@
   }
 }
 
-.second-screen {
-  
-  width: 100%;margin-bottom: 40px;
-  position: relative;
-}
+
 
 :root {
   --main: #2F80ED;
@@ -300,8 +296,10 @@ body.video-open {
 }
 
 .first-screen{
-  height: 100%;
+  min-height: 100vh;
 }
+
+
 
 
 .main{
@@ -582,8 +580,11 @@ body.video-open {
 }
 
 .selector:hover .selector-text::after {
-  animation: arrowSlide 1s ease forwards;
+  animation: arrowSlide  none;
 } 
+
+
+
 
 
 
@@ -1068,7 +1069,7 @@ position: relative;
 
   .main {
     margin-top: 126px;
-    margin-bottom: 30px;
+    
   }
 
   .column-img {
@@ -1232,7 +1233,7 @@ position: relative;
 
   /* Корректируем все элементы под новую ширину */
   .banner {
-    height: 450px;
+    height: 313px;
     width: 299px;
     background-image: url('./image/Mask\ group\ \(9\).png');
     background-position: top center;
