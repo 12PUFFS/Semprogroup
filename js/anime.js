@@ -4,10 +4,10 @@ document.addEventListener('DOMContentLoaded', function() {
     const mainVideo = document.getElementById('mainVideo');
     
     videoThumb.addEventListener('click', function() {
-      // Показываем видео
+
       mainVideo.style.display = 'block';
       
-      // Включаем полноэкранный режим
+
       if (mainVideo.requestFullscreen) {
         mainVideo.requestFullscreen();
       } else if (mainVideo.webkitRequestFullscreen) {
@@ -16,13 +16,13 @@ document.addEventListener('DOMContentLoaded', function() {
         mainVideo.msRequestFullscreen();
       }
       
-      // Запускаем воспроизведение
+      
       mainVideo.play().catch(e => {
         console.log('Автовоспроизведение заблокировано:', e);
         mainVideo.controls = true;
       });
       
-      // Обработчик выхода из полноэкранного режима
+      
       function exitHandler() {
         if (!document.fullscreenElement && !document.webkitFullscreenElement && !document.msFullscreenElement) {
           mainVideo.style.display = 'none';

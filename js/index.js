@@ -1,28 +1,28 @@
 document.addEventListener('DOMContentLoaded', function() {
-  // Элементы
+
   const openModalBtns = document.querySelectorAll('#openModalBtn, .another-modal-btn'); 
   const closeModalBtn = document.getElementById('closeModalBtn');
   const modalOverlay = document.getElementById('modalOverlay');
   
-  // Открытие модального окна (для всех кнопок)
+
   openModalBtns.forEach(btn => {
       btn.addEventListener('click', function(e) {
           e.preventDefault();
           modalOverlay.classList.add('active');
-          document.body.style.overflow = 'hidden'; // Блокируем скролл страницы
+          document.body.style.overflow = 'hidden'; 
       });
   });
   
-  // Закрытие модального окна
+
   closeModalBtn.addEventListener('click', function() {
       modalOverlay.classList.remove('active');
-      document.body.style.overflow = ''; // Восстанавливаем скролл
+      document.body.style.overflow = ''; 
   });
   
  
 
   
-  // Закрытие по ESC
+
   document.addEventListener('keydown', function(e) {
       if (e.key === 'Escape' && modalOverlay.classList.contains('active')) {
           modalOverlay.classList.remove('active');
@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function() {
       }
   });
   
-  // Маска для телефона
+
   const phoneInput = document.getElementById('phone');
   if (phoneInput) {
       phoneInput.addEventListener('input', function(e) {
@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function() {
       });
   }
   
-  // Отправка формы
+
   const callbackForm = document.querySelector('.callback-form');
   if (callbackForm) {
       callbackForm.addEventListener('submit', function(e) {
@@ -56,8 +56,8 @@ document.addEventListener('DOMContentLoaded', function() {
           document.body.style.overflow = '';
           callbackForm.reset();
           
-          // Можно добавить отправку на сервер через fetch()
-          // fetch('/submit-form', { method: 'POST', body: formData })...
+          
+        //   fetch('/submit-form', { method: 'POST', body: formData })
       });
   }
 });

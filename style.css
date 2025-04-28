@@ -75,8 +75,8 @@ body {
 
 .menu-line{
   width: 109px;
-  height: 1px;          /* Толщина линии */
-  background-color: #D7D7D7; /* Цвет линии */
+  height: 1px;          
+  background-color: #D7D7D7; 
   margin: 10px 0;  
 }
 
@@ -100,7 +100,7 @@ body {
   border-radius: 100%;
   width: 110px;
   height: 110px;
-  background: white; /* Цвет фона */
+  background: white; 
   -webkit-mask: radial-gradient(
     circle at center,
     transparent 50px,
@@ -201,7 +201,7 @@ body.video-open {
 
   width: 1360px;
   z-index: 100;
-            /* Тень для визуального отделения при скролле */
+          
 
             background: white;
 
@@ -215,7 +215,7 @@ body.video-open {
 .header {
   position: relative;
 
-  /* остальные стили */
+
 }
 
 .header.sticky {
@@ -231,7 +231,7 @@ body.video-open {
 
 .navbar{
   
-  display: flex; /* Включаем flexbox */
+  display: flex; 
   height: 100px;
   
 
@@ -255,7 +255,7 @@ body.video-open {
 
 
 
-/* Основные изменения для фиксированного хедера */
+
 /* .header {
   position: sticky;
   top: 0; 
@@ -270,7 +270,7 @@ body.video-open {
   align-items: center;
 } */
 
-/* Модальное окно */
+
 .modal-overlay {
   position: fixed;
   top: 0;
@@ -320,25 +320,25 @@ body.video-open {
   font-family: 'Proxima Nova';
 }
 
-/* Стили для поля телефона */
+
 #phone {
   font-family: 'Proxima Nova', Arial, sans-serif;
   letter-spacing: 0.5px;
 }
 
-/* Плейсхолдер в неактивном состоянии */
+
 #phone:not(:focus):placeholder-shown {
   color: transparent;
 }
 
-/* Плейсхолдер при фокусе */
+
 #phone:focus::placeholder {
   color: #ccc;
   opacity: 1;
   transition: color 0.2s ease;
 }
 
-/* Подсказка при неверном формате */
+
 #phone:invalid:not(:focus):not(:placeholder-shown) {
   border-color: #ff6b6b;
 }
@@ -347,12 +347,12 @@ body.video-open {
   color: #ff6b6b;
 }
 
-/* Стиль для поля с телефоном */
+
 #phone {
   letter-spacing: 0.5px;
 }
 
-/* Подсказка о формате (если нужно) */
+
 #phone::placeholder {
   color: transparent;
   transition: color 0.2s ease;
@@ -391,7 +391,7 @@ body.video-open {
   color: #333;
 }
 
-/* Форма */
+
 .form-group {
   position: relative;
   margin-bottom: 25px;
@@ -458,7 +458,7 @@ body.video-open {
   background-color: #555;
 }
 
-/* Адаптивность */
+
 @media (max-width: 767px) {
   .modal {
       padding: 30px 20px;
@@ -670,8 +670,8 @@ img{
 
 .left-side, .right-side {
   display: flex;
-  gap: 43px; /* Расстояние между элементами в группах */
-  flex: 1; /* Занимают равное пространство */
+  gap: 43px; 
+  flex: 1; 
 }
 
 
@@ -780,7 +780,7 @@ position: relative;
   margin-bottom: 27px;
   text-align: end;
   cursor: pointer;
-  transition: transform 1s ease; /* плавность анимации */
+  transition: transform 1s ease; 
   transition: font-size 0.5s ease;
   
 }
@@ -864,7 +864,7 @@ position: relative;
   font-weight: normal;
 }
 
-/* Стили для видео-блока (у вас уже должны быть) */
+
 
 
 /* .column-wth-img{
@@ -920,11 +920,6 @@ position: relative;
 }
 
 
-  /* Планшеты (верт., 768–1023px) */
-  /* Мобильные устройства (0–768px) */
-  /* Мобильные устройства (0-768px) */
-/* Мобильные устройства (0-768px) */
-/* Очень большие экраны (1770px+) */
 
 
 
@@ -997,7 +992,7 @@ position: relative;
   }
 }
 
-/* Большие десктопы (1281-1769px) */
+
 @media (min-width: 1281px) and (max-width: 1769px) {
   .container {
     max-width: 1440px;
@@ -1005,7 +1000,6 @@ position: relative;
   }
 }
 
-/* Десктопы (1025-1280px) */
 @media (min-width: 1025px) and (max-width: 1280px) {
   .container {
     max-width: 1200px;
@@ -1013,7 +1007,7 @@ position: relative;
   }
 }
 
-/* Планшеты (769-1024px) */
+
 @media (min-width: 1024px) and (max-width: 1280px)  {
   .container {
     width: 964px;
@@ -1145,7 +1139,7 @@ position: relative;
   }
 }
 
-/* Мобильные устройства (до 768px) */
+
 @media (min-width: 768px) and (max-width: 1023px){
   .container {
     max-width: 688px;
@@ -1191,10 +1185,10 @@ position: relative;
     display: inline;
   }
 
-  .modal-close{
+  /* .modal-close{
     top: 100px;
     right: 100px;
-  }
+  } */
 
   .left-side{
     align-items: center;
@@ -1206,7 +1200,7 @@ position: relative;
     background: #000;
     border-radius: 100px;
     
-    border: 1px solid #D7D7D7; /* Толщина и цвет кольца */
+    border: 1px solid #D7D7D7; 
     border-radius: 50%;
     background: transparent;
   }
@@ -1303,16 +1297,16 @@ position: relative;
   
 }
 
-/* Мелкие мобильные (до 360px) */
+
 @media(max-width: 767px){
   .container {
-    max-width: 340px; /* Фиксируем максимальную ширину */
+    max-width: 340px; 
     width: 100%;
-    padding: 0 20px; /* Добавляем боковые отступы */
-    box-sizing: border-box; /* Важно! Чтобы padding не увеличивал общую ширину */
+    padding: 0 20px; 
+    box-sizing: border-box; 
   }
 
-  /* Корректируем все элементы под новую ширину */
+
   .banner {
     height: 313px;
     width: 299px;
@@ -1424,7 +1418,7 @@ display: none;
 
 
  
-  border: 1px solid #2F80ED; /* Толщина и цвет кольца */
+  border: 1px solid #2F80ED; 
   border-radius: 50%;
   background: transparent;
     

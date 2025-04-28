@@ -1,4 +1,4 @@
-// JS-реализация sticky-эффекта
+
 window.addEventListener('scroll', function() {
     const header = document.querySelector('.header');
     const stickyStart = header.offsetTop;
