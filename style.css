@@ -1025,6 +1025,10 @@ position: relative;
     overflow: hidden;
   }
 
+  .second-screen{
+    min-height: 688px;
+  }
+
   .header {
     max-width: 964px;
   }
@@ -1089,9 +1093,9 @@ position: relative;
     font-size: 19px;
   }
 
-  .video-container {
-    width: 133px;
-    height: 133px;
+  .video-container  {
+    width: 133px !important;
+    height: 133px !important;
   }
 
   .desc {
@@ -1169,7 +1173,7 @@ position: relative;
   }
 
   .botton-text > img {
-    width: 608px;
+    width: 648px;
   }
 
   .botton-text p{
@@ -1248,6 +1252,10 @@ position: relative;
     width: 650px;
   }
 
+  .menu-line{
+    width: 69px;
+  }
+
   .ablosute{
     max-width: 81px;
     max-height: 81px;
@@ -1261,6 +1269,7 @@ position: relative;
 
   .details{
     font-size: 12px;
+    margin-top: 0;
   }
 
   .description{
