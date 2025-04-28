@@ -60,6 +60,8 @@ body {
   position: relative;
   width: 186px;
   height: 186px;
+  min-height: 133px;
+  min-width: 133px;
   border-radius: 100px;
   overflow: hidden;
   cursor: pointer;
@@ -1189,7 +1191,10 @@ position: relative;
     display: inline;
   }
 
-
+  .modal-close{
+    top: 100px;
+    right: 100px;
+  }
 
   .left-side{
     align-items: center;
@@ -1452,16 +1457,38 @@ display: none;
   }
 
   .block{
-    display: none;
+    margin-top: 500px;
+    position: absolute;
+    left: 40px;
+    gap: 15px;
   }
 
   .columns{
     gap: 53px;
   }
 
+  .modal-close{
+    top: 20px;
+    right: 20px;
+  }
 
 
-  
+  .menu-line{
+    min-width: 59px;
+  }
+
+  #videoContainer{
+    width: 131px;
+    height: 131px;
+    margin-bottom: 20px;
+  }
+
+  .video-thumb::after
+  {
+    top: 14px;
+    left: 13px;
+    position: absolute;
+  }
   
 
 }

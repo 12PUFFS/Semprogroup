@@ -19,13 +19,8 @@ document.addEventListener('DOMContentLoaded', function() {
       document.body.style.overflow = ''; // Восстанавливаем скролл
   });
   
-  // Закрытие по клику вне модального окна
-  modalOverlay.addEventListener('click', function(e) {
-      if (e.target === modalOverlay) {
-          modalOverlay.classList.remove('active');
-          document.body.style.overflow = '';
-      }
-  });
+ 
+
   
   // Закрытие по ESC
   document.addEventListener('keydown', function(e) {
