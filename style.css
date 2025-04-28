@@ -140,12 +140,7 @@ body {
   
 }
 
-.play-btn:hover{
-  border-radius: 50%;
-  width: 60px;
-  height: 60px;
-  background: red;
-}
+
 
 .preplay-btn{
   width: 11px;
@@ -1155,6 +1150,10 @@ position: relative;
     padding: 0 20px;
   }
 
+  .text-content{
+    margin-bottom: 20px;
+  }
+
   .selector-after{
     top: 14px;
     right: 10%;
@@ -1334,6 +1333,11 @@ display: none;
     width: 280px; 
     
   }
+
+  .second-screen{
+    position: absolute;
+    left: -40px;
+    }
   
 
   .left-side{
@@ -1425,6 +1429,38 @@ display: none;
   body {
     overflow-x: hidden;
   }
+
+.column-img{
+  width: 296px;
+  height: 403px;
+}
+
+.botton-text > img{
+  width: 300px;
+}
+
+.text-content{
+  left: 40px;
+  position: absolute;
+}
+
+  .ablosute{
+    
+    width: 87px;
+    height: 87px;
+    left: 253px;
+  }
+
+  .block{
+    display: none;
+  }
+
+  .columns{
+    gap: 53px;
+  }
+
+
+
   
   
 
