@@ -1311,6 +1311,10 @@ position: relative;
 
   }
 
+  .video-desc{
+    width: 92px;
+  }
+
 
   .banner {
     height: 313px;
@@ -1459,7 +1463,7 @@ display: none;
     margin-top: 500px;
     position: absolute;
     left: 40px;
-    gap: 15px;
+    gap: 05px;
   }
 
   .columns{
@@ -1473,7 +1477,7 @@ display: none;
 
 
   .menu-line{
-    min-width: 59px;
+    width: 20px;
   }
 
   #videoContainer{
