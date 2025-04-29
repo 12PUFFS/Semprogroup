@@ -1463,7 +1463,7 @@ display: none;
     margin-top: 500px;
     position: absolute;
     left: 40px;
-    gap: 05px;
+    gap: 5px;
   }
 
   .columns{
@@ -1477,7 +1477,7 @@ display: none;
 
 
   .menu-line{
-    width: 20px;
+    min-width: 30px;
   }
 
   #videoContainer{
